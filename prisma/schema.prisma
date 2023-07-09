@@ -15,7 +15,7 @@ model Product {
   data_preco         DateTime
   cod_produto        Int
   sku                String
-  qtd_estoque        Decimal
+  qtd_estoque        Int
   desconto           Decimal
   data_hora_insercao DateTime @default(now())
   data_inicio        DateTime
