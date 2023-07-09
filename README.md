@@ -4,9 +4,9 @@
 
 Desenvolva uma API que tenha duas rotas:
 * *"/produtos"*:
-[ ](POST) Essa rota vai receber um array de objetos (vou te mandar o modelo abaixo)
+[x](POST) Essa rota vai receber um array de objetos (vou te mandar o modelo abaixo)
 
-[ ](GET) Essa rota vai devolver uma lista de objetos do banco (no mesmo modelo da de cima)
+[x](GET) Essa rota vai devolver uma lista de objetos do banco (no mesmo modelo da de cima)
 
 
 * *"/"*:
