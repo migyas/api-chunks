@@ -10,12 +10,11 @@ Desenvolva uma API que tenha duas rotas:
 
 
 * *"/"*:
-[ ](GET) Essa rota vai devolver um "Hello World" e o status 200.
+[x](GET) Essa rota vai devolver um "Hello World" e o status 200.
 
 ### REQUISITOS:
 
-[x] Construção em node 
-[ ] a rota POST de produtos vai receber acima de 100k de linhas então insira no banco em chunks de 10k.
+[] Construção em node a rota POST de produtos vai receber acima de 100k de linhas então insira no banco em chunks de 10k.
 
 [ ] A rota GET de produtos vai receber como parâmetro dois dados para paginação ( row_count:  quantidade a ser exibida | row_skip: quantidade a ser ignorada) 
 
