@@ -7,6 +7,7 @@ export class PrismaProductsRepository implements ProductsRepository {
     const user = await prisma.product.create({
       data,
     });
+
     return user;
   }
 }

@@ -13,7 +13,7 @@ datasource db {
 model Product {
   key                String   @id @default(uuid())
   data_preco         DateTime
-  cod_produto        Int
+  cod_produto        BigInt
   sku                String
   qtd_estoque        Int
   desconto           Decimal
