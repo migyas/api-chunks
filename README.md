@@ -14,13 +14,13 @@ Desenvolva uma API que tenha duas rotas:
 
 ### REQUISITOS:
 
-[ ] Construção em node 
+[x] Construção em node 
 [ ] a rota POST de produtos vai receber acima de 100k de linhas então insira no banco em chunks de 10k.
 
 [ ] A rota GET de produtos vai receber como parâmetro dois dados para paginação ( row_count:  quantidade a ser exibida | row_skip: quantidade a ser ignorada) 
 
 ### DESEJÁVEL 
-[ ] Utilização de framework Fastify ou Nestjs. 
+[x] Utilização de framework Fastify ou Nestjs. 
 
 [ ] Gerar logs contendo data de acionamento e quantidade de itens a serem inseridos (em rotas POST)
 
