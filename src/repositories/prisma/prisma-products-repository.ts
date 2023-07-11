@@ -3,11 +3,14 @@ import { ProductsRepository } from "../products-repository";
 import { prisma } from "@/lib/prisma";
 
 export class PrismaProductsRepository implements ProductsRepository {
-  async create(data: Prisma.ProductCreateInput) {
-    const user = await prisma.product.create({
-      data,
-    });
-
-    return user;
+  async create(data: [Prisma.ProductCreateManyInput]) {
+    const products = await prisma.$transaction(
+      data.map((product) => {
+        return prisma.product.create({
+          data: product,
+        });
+      })
+    );
+    return products;
   }
 }

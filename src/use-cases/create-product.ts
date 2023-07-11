@@ -13,25 +13,9 @@ interface CreateProductUseCaseRequest {
 export class CreateProductUseCase {
   constructor(private productsRepository: ProductsRepository) {}
 
-  async execute({
-    cod_produto,
-    data_fim,
-    data_inicio,
-    data_preco,
-    desconto,
-    qtd_estoque,
-    sku,
-  }: CreateProductUseCaseRequest) {
-    const product = await this.productsRepository.create({
-      cod_produto,
-      data_fim,
-      data_inicio,
-      data_preco,
-      desconto,
-      qtd_estoque,
-      sku,
-    });
+  async execute(data: CreateProductUseCaseRequest[]) {
+    const products = await this.productsRepository.create(data);
 
-    return { product };
+    return { products };
   }
 }
