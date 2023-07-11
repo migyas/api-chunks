@@ -20,6 +20,7 @@ export class PrismaProductsRepository implements ProductsRepository {
         });
       })
     );
+
     return products;
   }
 }
