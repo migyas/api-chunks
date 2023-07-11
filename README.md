@@ -16,7 +16,7 @@ Desenvolva uma API que tenha duas rotas:
 
 [] Construção em node a rota POST de produtos vai receber acima de 100k de linhas então insira no banco em chunks de 10k.
 
-[ ] A rota GET de produtos vai receber como parâmetro dois dados para paginação ( row_count:  quantidade a ser exibida | row_skip: quantidade a ser ignorada) 
+[x] A rota GET de produtos vai receber como parâmetro dois dados para paginação ( row_count:  quantidade a ser exibida | row_skip: quantidade a ser ignorada) 
 
 ### DESEJÁVEL 
 [x] Utilização de framework Fastify ou Nestjs. 
@@ -27,7 +27,7 @@ Desenvolva uma API que tenha duas rotas:
 
 ### OPCIONAL:
 
-[ ] Banco de dados (POSTGRES/MYSQL/SQLITE).
+[x] Banco de dados (POSTGRES/MYSQL/SQLITE).
 
 - Modelo do objeto 
 {
