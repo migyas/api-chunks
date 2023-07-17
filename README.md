@@ -1,36 +1,35 @@
-## DESENVOLVER API DE INSERÇÃO EM CHUNKS
+# DESENVOLVER API DE INSERÇÃO EM CHUNKS
 
-### Config Project in Your Setup
+## Config Project in Your Setup
 
-## Install All Dependencies
+### Install All Dependencies
 
 ```shell
 npm install
 ```
-## Run Docker Container Without Logs
+### Run Docker Container Without Logs
 
 ```shell
 docker compose up -d
 ```
 
-## Run Migrates
+### Run Migrates
 
 ```shell
 npx prisma migrate dev
 ```
 
-## Start Project
+### Start Project
 
 ```shell
 npm run dev
 ```
 
-## Run Prisma Studio for View Database
+### Run Prisma Studio for View Database
 
 ```shell
 npx prisma studio
 ```
-
 
 ### Descrição 
 
