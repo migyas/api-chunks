@@ -1,15 +1,47 @@
 ## DESENVOLVER API DE INSERÇÃO EM CHUNKS
 
+### Config Project in Your Setup
+
+## Install All Dependencies
+
+```shell
+npm install
+```
+## Run Docker Container Without Logs
+
+```shell
+docker compose up -d
+```
+
+## Run Migrates
+
+```shell
+npx prisma migrate dev
+```
+
+## Start Project
+
+```shell
+npm run dev
+```
+
+## Run Prisma Studio for View Database
+
+```shell
+npx prisma studio
+```
+
+
 ### Descrição 
 
 Desenvolva uma API que tenha duas rotas:
-* *"/produtos"*:
+"/produtos":
 [x](POST) Essa rota vai receber um array de objetos (vou te mandar o modelo abaixo)
 
 [x](GET) Essa rota vai devolver uma lista de objetos do banco (no mesmo modelo da de cima)
 
 
-* *"/"*:
+"/":
 [x](GET) Essa rota vai devolver um "Hello World" e o status 200.
 
 ### REQUISITOS:
@@ -29,15 +61,5 @@ Desenvolva uma API que tenha duas rotas:
 
 [x] Banco de dados (POSTGRES/MYSQL/SQLITE).
 
-- Modelo do objeto 
-{
-  "key": "fa494ffb-0af7-4bee-985c-556e5e90721f",
-  "data_preco": "2023-08-01",
-  "cod_produto": 9999999999999,
-  "sku": "PZ0912",
-  "qtd_estoque": 10.0,
-  "desconto": 0.0,
-  "data_hora_insercao": "2023-07-01 00:00:00",
-  "data_inicio": "2023-07-01",
-  "data_fim": "2023-07-31"
-}
+
+Thanks for the opportunity, awaiting feedback!
