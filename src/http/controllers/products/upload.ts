@@ -5,6 +5,21 @@ import { fromZodError } from "zod-validation-error";
 import { Transform } from "node:stream";
 import { pipeline } from "node:stream/promises";
 import { setTimeout } from "node:timers/promises";
+import winston from "winston";
+
+const logger = winston.createLogger({
+  level: "info",
+  format: winston.format.combine(
+    winston.format.timestamp(),
+    winston.format.printf(({ timestamp, level, message }) => {
+      return `[${timestamp}] ${level}: ${message}`;
+    })
+  ),
+  transports: [
+    new winston.transports.Console(),
+    new winston.transports.File({ filename: "logs.txt" }),
+  ],
+});
 
 export async function upload(request: FastifyRequest, reply: FastifyReply) {
   const createFileSchema = z.array(
@@ -34,6 +49,11 @@ export async function upload(request: FastifyRequest, reply: FastifyReply) {
       );
 
       await Promise.all(promises);
+      logger.info(
+        `Rota POST acionada em ${new Date().toISOString()}. Itens a serem inseridos: ${
+          chunk.length
+        }`
+      );
       callback();
 
       return reply.status(201).send();
@@ -51,6 +71,7 @@ export async function upload(request: FastifyRequest, reply: FastifyReply) {
           await setTimeout(1000);
           const toBufferFile = await list.toBuffer();
           const parsedFiles = JSON.parse(toBufferFile.toString());
+
           callback(null, parsedFiles);
         },
       }),
