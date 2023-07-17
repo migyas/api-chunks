@@ -12,15 +12,9 @@ export class PrismaProductsRepository implements ProductsRepository {
     return products;
   }
 
-  async create(data: [Prisma.ProductCreateManyInput]) {
-    const products = await prisma.$transaction(
-      data.map((product) => {
-        return prisma.product.create({
-          data: product,
-        });
-      })
-    );
-
-    return products;
+  async create(data: Prisma.ProductCreateManyInput) {
+    await prisma.product.createMany({
+      data,
+    });
   }
 }

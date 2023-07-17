@@ -13,7 +13,7 @@ interface CreateProductUseCaseRequest {
 export class CreateProductUseCase {
   constructor(private productsRepository: ProductsRepository) {}
 
-  async execute(data: CreateProductUseCaseRequest[]) {
+  async execute(data: CreateProductUseCaseRequest) {
     const products = await this.productsRepository.create(data);
 
     return { products };

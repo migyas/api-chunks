@@ -1,6 +1,5 @@
 import fastify from "fastify";
 import fastifyMultipart from "@fastify/multipart";
-import fastifyFormidable from "fastify-formidable";
 
 import { mainRoutes } from "./http/controllers/main/routes";
 import { ZodError } from "zod";
@@ -12,7 +11,6 @@ export const app = fastify({
   connectionTimeout: 60000,
 });
 
-// app.register(fastifyFormidable, { addContentTypeParser: true });
 app.register(fastifyMultipart);
 app.register(mainRoutes);
 app.register(productsRoutes);

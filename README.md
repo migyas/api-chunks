@@ -14,7 +14,7 @@ Desenvolva uma API que tenha duas rotas:
 
 ### REQUISITOS:
 
-[] Construção em node a rota POST de produtos vai receber acima de 100k de linhas então insira no banco em chunks de 10k.
+[x] Construção em node a rota POST de produtos vai receber acima de 100k de linhas então insira no banco em chunks de 10k.
 
 [x] A rota GET de produtos vai receber como parâmetro dois dados para paginação ( row_count:  quantidade a ser exibida | row_skip: quantidade a ser ignorada) 
 
@@ -23,7 +23,7 @@ Desenvolva uma API que tenha duas rotas:
 
 [ ] Gerar logs contendo data de acionamento e quantidade de itens a serem inseridos (em rotas POST)
 
-[ ] Validação dos campos antes de inserir no banco e em caso de erro de validação não inserir devolver ao usuário qual campo está errado e qual tipo de dado esperado.
+[x] Validação dos campos antes de inserir no banco e em caso de erro de validação não inserir devolver ao usuário qual campo está errado e qual tipo de dado esperado.
 
 ### OPCIONAL:
 
