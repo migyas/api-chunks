@@ -21,7 +21,7 @@ Desenvolva uma API que tenha duas rotas:
 ### DESEJÁVEL 
 [x] Utilização de framework Fastify ou Nestjs. 
 
-[ ] Gerar logs contendo data de acionamento e quantidade de itens a serem inseridos (em rotas POST)
+[x] Gerar logs contendo data de acionamento e quantidade de itens a serem inseridos (em rotas POST)
 
 [x] Validação dos campos antes de inserir no banco e em caso de erro de validação não inserir devolver ao usuário qual campo está errado e qual tipo de dado esperado.
 
